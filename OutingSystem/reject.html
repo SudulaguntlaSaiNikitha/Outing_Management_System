@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>student login</title>
+  </head>
+  <style>
+    form {
+      text-decoration-color: white;
+      font-size: 16px;
+      font-family: helvetica, sans-serif;
+      background-color: #c2dde6;
+      margin: auto;
+      width: 550px;
+      
+      box-shadow: 3px 4px 4px #76c1d4 ;
+      border-radius: 10px;
+      transition : width 2s height 2s;
+      height : 530px; 
+    }
+    b {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #e05915;
+    }
+    i {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  
+    button {
+      background-color: #24305e;
+      color : white;
+      text-align: center;
+      padding: 8px 8px;
+      border: none;
+      border-radius: 6px;
+      margin:auto;
+      display:flex;
+      cursor:pointer;
+      margin-bottom : 10px;
+      margin-top : 10px;
+    }
+    .btn:hover {
+      background-color: white;
+      color : #24305e;
+      font-weight: bold;
+      border : 1px solid #24305e;
+    }
+    input {
+      border : none;
+      box-shadow : 1px 2px 2px #cd5554;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    textarea {
+      border : none;
+      box-shadow : 1px 2px 2px #cd5554;
+      border-radius: 2px;
+    }
+    h2 {
+      color : #022d36;
+    }
+    .a:hover {
+      border : 1px solid #cd5554;
+    }
+    #first{
+        padding-left: 44px;
+    }
+    img{
+        float: right;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+  </style>
+  <script>
+    function fun(){
+        document.location.href="facultyopen.html";
+    }
+  </script>
+  <body>
+    <h2 align = "center">Apply for Outing<a href="wrong.html"><img src="notify.jpg"height="50px"width="50px"></a>
+    </h2>
+    <hr>
+    <form action="">
+      <table align = "center" cellspacing = "2" cellpadding=" 7">
+        <tr>
+          <td><b>Upload photo: </b></td>
+          <td><input type="file" name="fileupload" accept="image/*"class = "a" /></td>
+          
+        </tr>
+        <tr>
+          <td><b>From Date: </b></td>
+          <td><input type="text" placeholder="enter from date" class = "a" /></td>
+        </tr>
+        <tr>
+          <td><b>To Date: </b></td>
+          <td><input type="text" placeholder="enter to date" class = "a"/></td>
+        </tr>
+        <tr>
+          <td><b>Reason: </b></td>
+          <td><textarea rows="3" cols="22" class = "a"></textarea></td>
+        </tr>
+        <tr>
+          <td><b>Place: </b></td>
+          <td><input type="adresss" class = "a"/></td>
+        </tr>
+        <tr>
+            <td><b>Choose an option: </b></td>
+          <td>
+            <input type="radio" name="a" value="local" class = "a" /><i>Local </i></input>
+            <input type="radio" name="a" value="general" class = "a"/> <i>General</i></input>
+            <input type="radio" name="a" value="emergency" class = "a"/> <i>Emergency</i></input>
+          </td>
+        </tr>
+        <tr>
+            <td><b>Choose an option: </b></td>
+          <td>
+            <input type="radio" name="b" value="local" class = "a"  /><i>Self</i></input>
+            <input type="radio" name="b" value="general" class = "a" /><i> Gaurdian</i></input>
+            <input type="radio" name="b" value="emergency" class = "a"/><i>Parent </i></input>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <table cellspacing = "2" cellpadding="7"id="first">
+        <tr>
+            <td><b>Parent name: </b></td>
+            <td><input type="text" placeholder="parentname" class = "a"></td>
+        </tr>
+        <tr>
+            <td><b>Parent phn no: </b></td>
+            <td><input type="text" placeholder="parent phn no" class = "a"></td>
+        </tr>
+      </table>
+      <div >
+      <button type="button"class="btn"onclick=fun()>Apply</button>
+    </div>
+    </form>
+ </body>
+</html>

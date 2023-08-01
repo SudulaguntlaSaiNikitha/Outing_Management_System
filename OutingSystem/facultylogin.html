@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Faculty Login</title>
+    <script>
+function formValidation()
+{
+        var uname = document.getElementById("name");
+        var upass = document.getElementById("pass");
+        if(allLetter(uname))
+        {
+            if(alphanumeric(upass))
+                {             
+                }
+        }
+        return false;
+} 
+
+function allLetter(uname)
+{ 
+var letters = /^[0-9A-Za-z]+$/;
+    if(uname.value.match(letters) && uname.value.trim().length==4)
+        {
+            return true;
+        }
+    else
+    {
+        alert("Reg no must have 4 alphanumeric characters ");
+        uname.focus();
+        return false;
+    }
+}
+function alphanumeric(upass)
+{ 
+    if(upass.value.trim()=="")
+    {
+        alert("Blank password");
+        return false;
+    }
+    else if(upass.value.trim().length<5){
+        alert("Password too short");
+        return false;
+    }
+    else
+    {
+        document.location.href="facultyopen.html";
+        return true;
+    }
+}
+</script>
+  </head>
+  <style>
+    form {
+      text-decoration-color: white;
+      font-size: 16px;
+      font-family: helvetica, sans-serif;
+      margin-left: 20%;
+      background-color: #a8d0e6;
+      margin: auto;
+      width: 40%;
+      padding: 1%;
+      box-shadow: 3px 4px 4px #374785;
+      border-radius: 10px;
+      transition : width 2s height 2s; 
+    }
+    th {
+      color: #ff5e5e;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+    }
+    input {
+      box-shadow : 2px 3px 3px #feec95;
+      border: none;
+      border-radius: 3px;
+      width : 280px;
+      padding: 15px;
+      transition : width 2s height 2s; 
+    }
+    input[type=submit]{
+      background-color: #24305e;
+      color : white;
+      width:70px;
+      text-align: center;
+      padding: 8px 8px;
+      border: none;
+      border-radius: 6px;
+      margin:auto;
+      display:flex;
+      cursor:pointer;
+      transition-property: width;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+      transition-delay: 1s; 
+      font-size: 20px;
+    }
+    ::placeholder {
+      color:rgb(95, 95, 95);
+      font-size: 22px;
+    }
+    .btn:hover {
+         background-color: #659dbd;
+         color:#1e2a56;
+         font-weight: bold;
+         
+         
+    }
+  </style>
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form onSubmit="return formValidation();">
+      <h2 align = "center">Faculty Login</h2>
+      <table cellspacing = "6px" cellpadding = "15px">
+        <tr>
+          <th>Faculty ID:</th>
+          <td><input type="text" id = "name" placeholder="enter 4 digit ID Number" required/></td>
+        </tr>
+        <tr>
+          <th>PassWord:</th>
+          <td>
+            <input type="password" id="pass"placeholder="enter password" required/>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" name="submit"class = "btn" value="Login" />
+      
+  </body>
+</html>

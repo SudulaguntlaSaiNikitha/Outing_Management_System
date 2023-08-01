@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" href="studentlogin.css">
+        <script>
+function formValidation()
+{
+        var uname = document.getElementById("name");
+        var upass = document.getElementById("pass");
+        if(allLetter(uname))
+        {
+            if(alphanumeric(upass))
+                {             
+                }
+        }
+        return false;
+} 
+
+function allLetter(uname)
+{ 
+var letters = /^[0-9A-Za-z]+$/;
+    if(uname.value.match(letters) && uname.value.trim().length==10)
+        {
+            return true;
+        }
+    else
+    {
+        alert("Reg no must have 10 alphanumeric characters ");
+        uname.focus();
+        return false;
+    }
+}
+function alphanumeric(upass)
+{ 
+    if(upass.value.trim()=="")
+    {
+        alert("Blank password");
+        return false;
+    }
+    else if(upass.value.trim().length<5){
+        alert("Password too short");
+        return false;
+    }
+    else
+    {
+        document.location.href="studentapply.html";
+        return true;
+    }
+}
+</script>
+        </head>
+    <body>
+        <fieldset>
+            <legend align="center">Student Login</legend>
+            <div>
+        <form onSubmit="return formValidation();">
+            <!--<img src="https://static.thenounproject.com/png/1050442-200.png" alt="">-->
+            <img src="student.jpg" alt="">
+
+            <table cell-padding="10"  cell-spacing="14">
+                <tr><td >
+                    <label for="">Registration No:</label>
+                    </td>
+                    <td><input type="text" placeholder="Enter 10digit Id number" name="text" id="name" class="first"required></td>
+                </tr>
+                <tr><td>
+                    <label for="">Password:</label>
+                </td>
+                    <td><input type="password" placeholder="password" name="pwd" id="pass" class="first"required></td>
+                </tr>
+            </table>
+            <input type="submit" name="submit"class = "btn"value="Login" />
+        </form>
+        </div>
+        </fieldset>
+    </body>
+</html>
